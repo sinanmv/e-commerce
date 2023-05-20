@@ -1,0 +1,24 @@
+.banner{
+    background-image: url('https://img.freepik.com/free-photo/woman-holding-various-shopping-bags-copy-space_23-2148674122.jpg?w=1380&t=st=1683276820~exp=1683277420~hmac=638f1981c33726c771f861b6baf0cd8c3d0ae5ff280d422f9fd530052c160c25');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card img{
+    transition: 3s;
+    height: 250px;
+    width: 100%;
+    padding: 20px;
+}
+.card{
+    transition: 0.5s;
+}
+.card:hover{
+    transition: 0.5s;
+    box-shadow: 0px 0px 15px -3px;
+}
+.card img:hover{
+    transform: scale(1.1);
+    transition: 2s;
+}

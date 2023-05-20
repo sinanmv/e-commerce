@@ -1,0 +1,51 @@
+<!-- Empty Wishlist -->
+
+<div class="container" *ngIf="wishlistdata.length==0 ">
+    <div class="row mt-5 mb-5">
+        <div class="col-3">
+
+        </div>
+        <div class="col-6">
+            <h1 class="text-center">Your WishList is Empty</h1>
+            <img src="https://www.elitejewelryhouse.com/assets/images/empty-wishlist.png" alt="" style="margin: 80px 0px;width: 100%;">
+            <a class="btn btn-danger text-center" style="margin-left:36% ;" href="">Continue Shopping -></a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Wishlist with Contain -->
+<section class="py-5" *ngIf="wishlistdata.length != 0">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let item of wishlistdata" >
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" [src]="item.image" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{item.title}}</h5>
+                            <!-- Product price-->
+                            {{item.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" routerLink="/products/viewproducts/{{item.id}}"> <i
+                                    class="fa-solid fa-eye"></i> View product</a>
+                        </div>
+                        <div class="text-center">
+                            <a (click)="deletewishlistproduct(item.id)" class="btn btn-outline-dark mt-2 me-4"> <i
+                                    class="fa-solid fa-trash"></i> </a>
+                            <a (click)="addtocart(item)" class="btn btn-outline-dark mt-2 ms-4"><i
+                                    class="fa-solid fa-cart-plus"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

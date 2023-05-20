@@ -1,0 +1,17 @@
+.card img{
+    transition: 3s;
+    height: 250px;
+    width: 100%;
+    padding: 20px;
+}
+.card{
+    transition: 0.5s;
+}
+.card:hover{
+    transition: 0.5s;
+    box-shadow: 0px 0px 15px -3px;
+}
+.card img:hover{
+    transform: scale(1.1);
+    transition: 2s;
+}
